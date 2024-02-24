@@ -41,7 +41,7 @@ ro.hdmi.cec_device=cec0
 ro.hdmi.device_type=4
 
 # Display
-debug.drm.mode.force=1920x1080
+debug.drm.mode.force=800x480
 
 # FFmpeg
 persist.ffmpeg_codec2.rank.audio=16
@@ -86,4 +86,3 @@ ro.vendor.v4l2_codec2.encode_concurrent_instances=8
 
 # Wifi
 wifi.interface=wlan0
-

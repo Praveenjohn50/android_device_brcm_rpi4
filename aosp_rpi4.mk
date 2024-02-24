@@ -11,19 +11,22 @@ PRODUCT_AAPT_CONFIG := normal mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
     AndroidRpiOverlay \
-    SettingsRpiOverlay \
+    CarServiceRpiOverlay \
     SettingsProviderRpiOverlay \
-    SystemUIRpiOverlay \
     WifiRpiOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
+# Vehicle
+PRODUCT_PACKAGES += \
+    android.hardware.automotive.vehicle@2.0-default-service
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := rpi4
 PRODUCT_NAME := aosp_rpi4

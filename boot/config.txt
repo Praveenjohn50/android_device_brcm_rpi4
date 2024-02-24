@@ -19,15 +19,15 @@ arm_boost=1
 disable_overscan=1
 
 # Display panel
-#dtoverlay=vc4-kms-dsi-7inch
-#dtoverlay=rpi-backlight
+dtoverlay=vc4-kms-dsi-7inch
+dtoverlay=rpi-backlight
 
 # Graphics acceleration
 disable_fw_kms_setup=1
 dtoverlay=vc4-kms-v3d
 
 # I2C
-#dtparam=i2c_arm=on
+dtparam=i2c_arm=on
 
 # I2S
 #dtparam=i2s=on
